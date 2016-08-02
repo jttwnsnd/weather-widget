@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<canvas class="the-canvas" height="500px" width="1500px">
+	<!-- canvas cannot draw. Canvas is an empty palatte on which to draw. Our stuff id going to go here! -->
+</canvas>
+
+<script type="text/javascript">
+	var canvas = document.getElementsByClassName('the-canvas')[0];
+	var context = canvas.getContext('2d');
+
+	console.log(context);
+
+	// context.beginPath();
+	// context.moveTo(100,100); //start
+	// context.lineTo(200,200); //go here
+	// context.lineTo(300,100);  //without lifting up, go here
+	// context.lineTo(100,200);
+	// context.lineTo(300,150);
+	// context.lineTo(100,100);
+	// context.moveTo(500,200);
+	// context.lineTo(500,100);
+	// context.strokeStyle = "#FF0000";
+	// context.stroke();
+
+	// //draw a circle
+	// context.beginPath();
+	// context.fillStyle = "#FFFF00";
+	// context.arc(175, 175, 50, 0*Math.PI, 2*Math.PI)
+	// context.fill();
+
+	// //draw a rectangle
+	// context.beginPath();
+	// context.rect(300,20,100, 100);
+	// context.stroke();
+
+	var x = 100;
+	var y = 100;
+	var radius = 10;
+	var endArc = 2;
+	var r = 0;
+	var g = 0;
+	var b = 0;
+
+	function draw(){
+		context.fillStyle = "#"+r+g+b;
+		context.beginPath();
+		context.clearRect(0,0,1500,400);
+		context.arc(x,y,radius,0,endArc*Math.PI);
+		context.fill();
+		x += 1;
+		y += 1;
+		radius += 1;
+		endArc += .1
+		r+= 1
+		g+=2
+	}
+
+	function drawGradient(){
+
+		x += 1;
+		y += 1;
+		var grd = context.createLinearGradient(100,100, 0,100);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"white");
+		context.fillStyle = grd;
+		context.fillRect(10,10,x,y);
+	}
+	
+
+	var ball = setInterval(drawGradient,40);
+</script>
+</body>
+</html>
