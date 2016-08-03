@@ -1,0 +1,36 @@
+.city{
+	padding: 5px 100px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.big{
+	margin-top: 40px;
+	font-size: 450%;
+	transition: all .5s ease-in-out;
+	padding: 0px;
+}
+
+.thermo{
+	background-color: #bbb;
+}
+
+.mid{
+	margin-top: 18px;
+	font-size: 25px;
+	padding: 0px;
+}
+.this-big{
+	height: 100%px;
+	width: 80%;
+	margin: 20px auto;
+	background-color: #e2e2e2;
+	border-radius: 10px;
+}
+#icon{
+}
+
+.description{
+	margin-top: 5px;
+	font-size: 150%;
+}

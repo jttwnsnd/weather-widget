@@ -2,16 +2,53 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<form class="weather-form">
-		<input type="text" name="city" class="city">
-	</form>
-	<canvas id="current-temp" height="300" width="300">
-		<!-- current temp done canvas style -->
-	</canvas>
+	<div class="container-fluid this-big">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>JT's Weather App</h2>
+			</div>
+			<hr />
+			<div class="col-sm-12 text-center">
+				<form class="weather-form">
+					<input type="text" name="city" class="city">
+				</form>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-5 col-sm-offset-1 text-center">
+				<div class="col-sm-10 big"><span id="big-temp">0</span><span>&deg F</span></div>
+				<div class="col-sm-2">
+					<canvas id="current-temp" class="thermo" height="200" width="30">
+				<!-- current temp done canvas style -->
+					</canvas>
+				</div>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1 gray">
+				<div class="col-sm-3">
+					<canvas id="current-humidity" height="70" width='70'>
+						
+					</canvas>
+				</div>
+				<div class="col-sm-8 col-sm-offset-1 mid text-center"><span>Humidity </span><span id="humidity">0</span><span>%</span></div>
+				<div class="col-sm-12 text-center"><img id="icon"></div>
+				<div class="col-sm-12 text-center"><span class="description"></span></div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+			</div>
+		</div>
+	</div>
 
 <script type="text/javascript" src="jquery.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="scripts.js"></script>
 </body>
 </html>
